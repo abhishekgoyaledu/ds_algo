@@ -1,34 +1,31 @@
 package dynamic_programming.longest_common_subsequence;
 
-import java.util.HashMap;
-
 // x :- abcdgh
 // y :- abjdoh
 // o/p :- 4 (why? ~ abdh are common)
-public class LongestCommonSubsequence {
+public class LengthLongestCommonSubsequence {
 
     public static void main(String[] args) {
         String x = "ezupkr";
         String y = "ubmrapg";
-        System.out.println(new LongestCommonSubsequence().longestIncrSubsequenceRecursive(x, y, x.length(), y.length()));
-        System.out.println(new LongestCommonSubsequence().longestIncrSubsequenceTopDown(x, y));
-        System.out.println(new LongestCommonSubsequence().longestCommonSubsequence(x, y));
+        System.out.println(new LengthLongestCommonSubsequence().longestCommonSubsequenceRecursive(x, y, x.length(), y.length()));
+        System.out.println(new LengthLongestCommonSubsequence().longestCommonSubsequenceTopDown(x, y));
     }
 
     //Recursive
-    public int longestIncrSubsequenceRecursive(String x, String y, int n, int m) {
+    public int longestCommonSubsequenceRecursive(String x, String y, int n, int m) {
         if (n == 0 || m == 0) {
             return 0;
         }
         if(x.charAt(n-1) == y.charAt(m-1)) {
-            return 1 + longestIncrSubsequenceRecursive(x, y, n - 1, m - 1);
+            return 1 + longestCommonSubsequenceRecursive(x, y, n - 1, m - 1);
         } else {
-            return Math.max(longestIncrSubsequenceRecursive(x, y, n - 1, m), longestIncrSubsequenceRecursive(x, y, n, m - 1));
+            return Math.max(longestCommonSubsequenceRecursive(x, y, n - 1, m), longestCommonSubsequenceRecursive(x, y, n, m - 1));
         }
     }
 
     //TopDown Approach
-    public int longestIncrSubsequenceTopDown(String x, String y) {
+    public int longestCommonSubsequenceTopDown(String x, String y) {
         int n = x.length();
         int m = y.length();
         int [][]t = new int[n + 1][m + 1];

@@ -11,6 +11,7 @@ public class MinInsertionRequiredToMakeStringPalindrome {
         sb = sb.reverse();
         String b = sb.toString();
         int length = longestCommonSubsequenceTopDown(s, b);
+        //This is equivalent to number of deletions
         return (s.length() - length);
     }
 

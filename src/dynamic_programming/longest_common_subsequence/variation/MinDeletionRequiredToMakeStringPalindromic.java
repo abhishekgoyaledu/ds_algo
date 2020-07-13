@@ -5,7 +5,7 @@ import dynamic_programming.longest_common_subsequence.LengthLongestCommonSubsequ
 public class MinDeletionRequiredToMakeStringPalindromic {
 
     public static void main(String[] args) {
-        String a = "agbcbga";
+        String a = "aebcbeda";
         StringBuilder sb = new StringBuilder(a);
         sb = sb.reverse();
         String b = sb.toString();

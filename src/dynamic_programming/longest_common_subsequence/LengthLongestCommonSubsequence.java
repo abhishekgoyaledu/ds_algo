@@ -6,8 +6,8 @@ package dynamic_programming.longest_common_subsequence;
 public class LengthLongestCommonSubsequence {
 
     public static void main(String[] args) {
-        String x = "ezupkr";
-        String y = "ubmrapg";
+        String x = "abcde";
+        String y = "ceabd";
         System.out.println(new LengthLongestCommonSubsequence().longestCommonSubsequenceRecursive(x, y, x.length(), y.length()));
         System.out.println(new LengthLongestCommonSubsequence().longestCommonSubsequenceTopDown(x, y));
     }

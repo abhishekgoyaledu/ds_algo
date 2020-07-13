@@ -1,11 +1,11 @@
-package dynamic_programming.unbounded_knapsack;
+package dynamic_programming.unbounded_knapsack.variations;
 
 public class CoinChangeMaximumNumberOfWays {
 
     static int count = 0;
     public static void main(String[] args) {
         int []coins = {1, 2, 3};
-        int sum = 5;
+        int sum = 3;
         new CoinChangeMaximumNumberOfWays().maxNumberOfWaysRecursive(coins, sum, coins.length);
         System.out.println(count);
         System.out.println(new CoinChangeMaximumNumberOfWays().maxNumberOfWaysTopDown(coins, sum));

@@ -1,4 +1,4 @@
-package dynamic_programming.unbounded_knapsack;
+package dynamic_programming.unbounded_knapsack.variations;
 
 public class MinimumNumberOfCoins {
 //    public static void main(String[] args) {
